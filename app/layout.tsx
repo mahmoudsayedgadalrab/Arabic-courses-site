@@ -4,6 +4,9 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { siteConfig } from "@/lib/site";
+import MotionRoot from "@/components/motion/MotionRoot";
+import PageTransition from "@/components/motion/PageTransition";
+import Reveal from "@/components/motion/Reveal";
 
 const cairo = Cairo({
   subsets: ["arabic", "latin"],
@@ -34,9 +37,15 @@ export default function RootLayout({
   return (
     <html lang="ar" dir="rtl" className={cairo.variable}>
       <body className="flex min-h-screen flex-col font-arabic text-brand-900 antialiased">
-        <Navbar />
-        <main className="flex-1">{children}</main>
-        <Footer />
+        <MotionRoot>
+          <Navbar />
+          <main className="flex-1">
+            <PageTransition>{children}</PageTransition>
+          </main>
+          <Reveal trigger="view">
+            <Footer />
+          </Reveal>
+        </MotionRoot>
       </body>
     </html>
   );

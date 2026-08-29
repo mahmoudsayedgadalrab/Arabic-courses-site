@@ -4,7 +4,7 @@ import InstagramIcon from "@/components/InstagramIcon";
 
 export default function Navbar() {
   return (
-    <header className="sticky top-0 z-40 border-b border-brand-100 bg-sand-50/90 backdrop-blur">
+    <header className="animate-navbar-in sticky top-0 z-40 border-b border-brand-100 bg-sand-50/90 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
         <Link href="/" className="flex items-center gap-2 text-brand-800">
           <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-brand-700 text-sand-50 font-bold">
@@ -38,7 +38,7 @@ export default function Navbar() {
           </a>
           <Link
             href="/register"
-            className="rounded-full bg-brand-700 px-4 py-2 text-sm font-semibold text-sand-50 shadow-soft transition hover:bg-brand-600"
+            className="rounded-full bg-brand-700 px-4 py-2 text-sm font-semibold text-sand-50 shadow-soft transition hover:scale-[1.03] hover:bg-brand-600 active:scale-95"
           >
             سجّل الآن
           </Link>
