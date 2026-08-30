@@ -9,3 +9,33 @@ html {
 body {
   background-color: #fdfbf6;
 }
+
+/*
+ * Plain CSS entrance animation for the sticky navbar.
+ * Deliberately not a Framer Motion wrapper: a `transform` on any ANCESTOR
+ * of a `position: sticky` element breaks its stickiness in every major
+ * browser (same mechanism that breaks position:fixed descendants), and
+ * Framer Motion leaves a `transform` on its wrapper even after the
+ * animation finishes. Animating the sticky element's own transform is
+ * safe - only an ancestor's transform disables sticky.
+ */
+@keyframes navbar-in {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-navbar-in {
+  animation: navbar-in 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-navbar-in {
+    animation: none;
+  }
+}
