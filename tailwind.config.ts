@@ -9,6 +9,7 @@ const config: Config = {
     extend: {
       fontFamily: {
         arabic: ["var(--font-arabic)", "Tahoma", "Arial", "sans-serif"],
+        display: ["var(--font-display)", "var(--font-arabic)", "serif"],
       },
       colors: {
         brand: {
@@ -39,6 +40,16 @@ const config: Config = {
       },
       boxShadow: {
         soft: "0 10px 30px -12px rgba(35, 55, 44, 0.25)",
+        lift: "0 1px 0 rgba(255, 255, 255, 0.6) inset, 0 24px 48px -24px rgba(35, 55, 44, 0.35)",
+      },
+      keyframes: {
+        rise: {
+          "0%": { opacity: "0", transform: "translateY(14px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
+      },
+      animation: {
+        rise: "rise 700ms cubic-bezier(0.22, 1, 0.36, 1) both",
       },
     },
   },

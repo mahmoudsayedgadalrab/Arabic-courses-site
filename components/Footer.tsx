@@ -4,57 +4,39 @@ import InstagramIcon from "@/components/InstagramIcon";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-brand-100 bg-white">
-      <div className="mx-auto grid max-w-6xl gap-8 px-5 py-10 sm:grid-cols-3">
-        <div>
-          <div className="flex items-center gap-2 text-brand-800">
-            <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-brand-700 text-sand-50 font-bold">
+    <footer className="relative z-10 border-t border-brand-900/5">
+      <div className="mx-auto flex max-w-6xl flex-col gap-10 px-5 pb-10 pt-14 sm:flex-row sm:items-start sm:justify-between">
+        <div className="max-w-sm">
+          <div className="flex items-center gap-2.5 text-brand-900">
+            <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-brand-800 pb-1 font-display text-lg font-bold text-sand-100">
               ع
             </span>
             <span className="text-base font-bold">{siteConfig.shortName}</span>
           </div>
-          <p className="mt-3 text-sm leading-6 text-brand-700/80">
-            {siteConfig.description}
-          </p>
+          <p className="mt-4 text-sm leading-7 text-brand-700/75">{siteConfig.description}</p>
         </div>
 
-        <div>
-          <h4 className="mb-3 text-sm font-bold text-brand-800">روابط سريعة</h4>
-          <ul className="space-y-2 text-sm text-brand-700/80">
-            <li>
-              <Link href="/" className="transition hover:text-brand-500">
-                الرئيسية
-              </Link>
-            </li>
-            <li>
-              <Link href="/#courses" className="transition hover:text-brand-500">
-                الكورسات
-              </Link>
-            </li>
-            <li>
-              <Link href="/register" className="transition hover:text-brand-500">
-                فورم التسجيل
-              </Link>
-            </li>
-          </ul>
-        </div>
-
-        <div>
-          <h4 className="mb-3 text-sm font-bold text-brand-800">تواصل معنا</h4>
+        <nav aria-label="روابط التذييل" className="flex flex-wrap gap-x-8 gap-y-3 text-sm text-brand-700/80">
+          <Link href="/#courses" className="transition duration-200 hover:text-brand-900">
+            الكورسات
+          </Link>
+          <Link href="/register" className="transition duration-200 hover:text-brand-900">
+            التسجيل
+          </Link>
           <a
             href={siteConfig.instagramUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-full border border-brand-200 px-4 py-2 text-sm font-medium text-brand-700 transition hover:border-brand-400 hover:text-brand-500"
+            className="inline-flex items-center gap-1.5 transition duration-200 hover:text-brand-900"
           >
-            <InstagramIcon />
-            @{siteConfig.instagramHandle}
+            <InstagramIcon className="h-4 w-4" />
+            <span dir="ltr">@{siteConfig.instagramHandle}</span>
           </a>
-        </div>
+        </nav>
       </div>
 
-      <div className="border-t border-brand-100 py-4 text-center text-xs text-brand-700/60">
-        © {new Date().getFullYear()} {siteConfig.name} — جميع الحقوق محفوظة
+      <div className="mx-auto max-w-6xl border-t border-brand-900/5 px-5 py-5 text-xs text-brand-700/60">
+        © {new Date().getFullYear().toLocaleString("ar-EG", { useGrouping: false })} {siteConfig.name}
       </div>
     </footer>
   );

@@ -1,49 +1,41 @@
 import Link from "next/link";
 import { siteConfig } from "@/lib/site";
 import InstagramIcon from "@/components/InstagramIcon";
+import NavLinks from "@/components/NavLinks";
 
 export default function Navbar() {
   return (
-    <header className="sticky top-0 z-40 border-b border-brand-100 bg-sand-50/90 backdrop-blur">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
-        <Link href="/" className="flex items-center gap-2 text-brand-800">
-          <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-brand-700 text-sand-50 font-bold">
+    <header className="sticky top-0 z-40 border-b border-brand-900/5 bg-sand-50/80 backdrop-blur-md">
+      <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-3.5">
+        <Link href="/" className="flex items-center gap-2.5 text-brand-900">
+          <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-brand-800 pb-1 font-display text-xl font-bold text-sand-100">
             ع
           </span>
           <span className="text-lg font-bold">{siteConfig.shortName}</span>
         </Link>
 
-        <nav className="hidden items-center gap-8 text-sm font-medium text-brand-800 sm:flex">
-          <Link href="/" className="transition hover:text-brand-500">
-            الرئيسية
-          </Link>
-          <Link href="/#courses" className="transition hover:text-brand-500">
-            الكورسات
-          </Link>
-          <Link href="/register" className="transition hover:text-brand-500">
-            التسجيل
-          </Link>
-        </nav>
+        <NavLinks className="hidden items-center gap-8 text-sm font-medium md:flex" />
 
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-4">
           <a
             href={siteConfig.instagramUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden items-center gap-1.5 text-sm font-medium text-brand-700 transition hover:text-brand-500 sm:flex"
+            className="text-brand-700 transition duration-200 hover:text-sand-700"
             aria-label="تابعنا على انستجرام"
           >
             <InstagramIcon />
-            انستجرام
           </a>
           <Link
             href="/register"
-            className="rounded-full bg-brand-700 px-4 py-2 text-sm font-semibold text-sand-50 shadow-soft transition hover:bg-brand-600"
+            className="rounded-lg bg-brand-800 px-4 py-2 text-sm font-semibold text-sand-50 transition duration-200 hover:bg-brand-700 active:scale-[0.98]"
           >
             سجّل الآن
           </Link>
         </div>
       </div>
+
+      <NavLinks className="flex items-center justify-center gap-8 border-t border-brand-900/5 py-2 text-sm font-medium md:hidden" />
     </header>
   );
 }
