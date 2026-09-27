@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Cairo } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
@@ -26,6 +26,14 @@ export const metadata: Metadata = {
   },
 };
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  // Match the browser chrome / status bar to the header background
+  themeColor: "#fdfbf6",
+  colorScheme: "light",
+};
+
 export default function RootLayout({
   children,
 }: {
@@ -33,7 +41,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ar" dir="rtl" className={cairo.variable}>
-      <body className="flex min-h-screen flex-col font-arabic text-brand-900 antialiased">
+      <body className="flex min-h-svh flex-col font-arabic text-brand-900 antialiased">
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />

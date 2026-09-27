@@ -61,7 +61,7 @@ export default function RegisterForm() {
         <button
           type="button"
           onClick={() => setStatus("idle")}
-          className="mt-6 rounded-full border border-brand-300 px-5 py-2 text-sm font-semibold text-brand-800 transition hover:border-brand-500"
+          className="mt-6 rounded-full border border-brand-300 px-5 py-2 text-sm font-semibold text-brand-800 transition hover:border-brand-500 active:scale-[0.97]"
         >
           تسجيل شخص آخر
         </button>
@@ -79,6 +79,8 @@ export default function RegisterForm() {
           id="name"
           name="name"
           type="text"
+          autoComplete="name"
+          enterKeyHint="next"
           value={name}
           onChange={(e) => setName(e.target.value)}
           placeholder="مثال: أحمد محمد"
@@ -97,6 +99,11 @@ export default function RegisterForm() {
           id="email"
           name="email"
           type="email"
+          autoComplete="email"
+          autoCapitalize="none"
+          autoCorrect="off"
+          spellCheck={false}
+          enterKeyHint="next"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           placeholder="example@email.com"
@@ -140,7 +147,7 @@ export default function RegisterForm() {
       <button
         type="submit"
         disabled={status === "loading"}
-        className="w-full rounded-full bg-brand-700 px-6 py-3 text-base font-semibold text-sand-50 shadow-soft transition hover:bg-brand-600 disabled:cursor-not-allowed disabled:opacity-70"
+        className="w-full rounded-full bg-brand-700 px-6 py-3 text-base font-semibold text-sand-50 shadow-soft transition hover:bg-brand-600 disabled:cursor-not-allowed disabled:opacity-70 active:scale-[0.97]"
       >
         {status === "loading" ? "جارٍ الإرسال..." : "إرسال التسجيل"}
       </button>

@@ -96,13 +96,13 @@ export default function CourseDetailsPage({
       <div className="flex flex-wrap items-center gap-4 border-t border-brand-100 pt-8">
         <Link
           href={{ pathname: "/register", query: { course: course.slug } }}
-          className="rounded-full bg-brand-700 px-6 py-3 text-base font-semibold text-sand-50 shadow-soft transition hover:bg-brand-600"
+          className="rounded-full bg-brand-700 px-6 py-3 text-base font-semibold text-sand-50 shadow-soft transition hover:bg-brand-600 active:scale-[0.97]"
         >
           سجّل في هذا الكورس
         </Link>
         <Link
           href="/#courses"
-          className="rounded-full border border-brand-300 px-6 py-3 text-base font-semibold text-brand-800 transition hover:border-brand-500 hover:text-brand-600"
+          className="rounded-full border border-brand-300 px-6 py-3 text-base font-semibold text-brand-800 transition hover:border-brand-500 hover:text-brand-600 active:scale-[0.97]"
         >
           تصفّح كورسات أخرى
         </Link>

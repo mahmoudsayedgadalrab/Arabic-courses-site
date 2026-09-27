@@ -7,7 +7,7 @@ export default function NotFound() {
       <p className="mb-8 text-brand-700/80">عذرًا، الصفحة التي تبحث عنها غير موجودة.</p>
       <Link
         href="/"
-        className="rounded-full bg-brand-700 px-6 py-3 text-sm font-semibold text-sand-50 shadow-soft transition hover:bg-brand-600"
+        className="rounded-full bg-brand-700 px-6 py-3 text-sm font-semibold text-sand-50 shadow-soft transition hover:bg-brand-600 active:scale-[0.97]"
       >
         العودة إلى الرئيسية
       </Link>

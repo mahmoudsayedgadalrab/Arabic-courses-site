@@ -1,6 +1,10 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
+  // Gate hover: styles behind (hover: hover) so taps don't leave them stuck on phones
+  future: {
+    hoverOnlyWhenSupported: true,
+  },
   content: [
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
