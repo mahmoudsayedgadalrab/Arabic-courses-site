@@ -21,13 +21,13 @@ export default function CourseCard({ course }: { course: Course }) {
       <div className="flex items-center gap-3">
         <Link
           href={`/courses/${course.slug}`}
-          className="flex-1 rounded-full border border-brand-700 px-4 py-2 text-center text-sm font-semibold text-brand-700 transition hover:bg-brand-700 hover:text-sand-50"
+          className="flex-1 rounded-full border border-brand-700 px-4 py-2 text-center text-sm font-semibold text-brand-700 transition hover:bg-brand-700 hover:text-sand-50 active:scale-[0.97]"
         >
           تفاصيل الكورس
         </Link>
         <Link
           href={{ pathname: "/register", query: { course: course.slug } }}
-          className="flex-1 rounded-full bg-brand-700 px-4 py-2 text-center text-sm font-semibold text-sand-50 transition hover:bg-brand-600"
+          className="flex-1 rounded-full bg-brand-700 px-4 py-2 text-center text-sm font-semibold text-sand-50 transition hover:bg-brand-600 active:scale-[0.97]"
         >
           سجّل الآن
         </Link>

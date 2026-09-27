@@ -24,13 +24,13 @@ export default function HomePage() {
             <div className="flex flex-wrap items-center gap-4">
               <Link
                 href="/register"
-                className="rounded-full bg-brand-700 px-6 py-3 text-base font-semibold text-sand-50 shadow-soft transition hover:bg-brand-600"
+                className="rounded-full bg-brand-700 px-6 py-3 text-base font-semibold text-sand-50 shadow-soft transition hover:bg-brand-600 active:scale-[0.97]"
               >
                 احجز مكانك الآن
               </Link>
               <a
                 href="#courses"
-                className="rounded-full border border-brand-300 px-6 py-3 text-base font-semibold text-brand-800 transition hover:border-brand-500 hover:text-brand-600"
+                className="rounded-full border border-brand-300 px-6 py-3 text-base font-semibold text-brand-800 transition hover:border-brand-500 hover:text-brand-600 active:scale-[0.97]"
               >
                 استعرض الكورسات
               </a>
@@ -49,7 +49,7 @@ export default function HomePage() {
                 href={siteConfig.instagramUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-2 inline-flex w-fit items-center gap-2 rounded-full bg-sand-100 px-4 py-2 text-sm font-semibold text-sand-800 transition hover:bg-sand-200"
+                className="mt-2 inline-flex w-fit items-center gap-2 rounded-full bg-sand-100 px-4 py-2 text-sm font-semibold text-sand-800 transition hover:bg-sand-200 active:scale-[0.97]"
               >
                 <InstagramIcon />
                 تابعنا @{siteConfig.instagramHandle}
@@ -132,7 +132,7 @@ export default function HomePage() {
         </p>
         <Link
           href="/register"
-          className="inline-block rounded-full bg-brand-700 px-8 py-3.5 text-base font-semibold text-sand-50 shadow-soft transition hover:bg-brand-600"
+          className="inline-block rounded-full bg-brand-700 px-8 py-3.5 text-base font-semibold text-sand-50 shadow-soft transition hover:bg-brand-600 active:scale-[0.97]"
         >
           سجّل الآن مجانًا
         </Link>

@@ -45,7 +45,7 @@ export default function Footer() {
             href={siteConfig.instagramUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-full border border-brand-200 px-4 py-2 text-sm font-medium text-brand-700 transition hover:border-brand-400 hover:text-brand-500"
+            className="inline-flex items-center gap-2 rounded-full border border-brand-200 px-4 py-2 text-sm font-medium text-brand-700 transition hover:border-brand-400 hover:text-brand-500 active:scale-[0.97]"
           >
             <InstagramIcon />
             @{siteConfig.instagramHandle}

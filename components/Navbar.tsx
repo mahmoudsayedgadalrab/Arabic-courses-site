@@ -38,7 +38,7 @@ export default function Navbar() {
           </a>
           <Link
             href="/register"
-            className="rounded-full bg-brand-700 px-4 py-2 text-sm font-semibold text-sand-50 shadow-soft transition hover:bg-brand-600"
+            className="rounded-full bg-brand-700 px-4 py-2 text-sm font-semibold text-sand-50 shadow-soft transition hover:bg-brand-600 active:scale-[0.97]"
           >
             سجّل الآن
           </Link>

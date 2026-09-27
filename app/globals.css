@@ -4,8 +4,31 @@
 
 html {
   scroll-behavior: smooth;
+  /* No gray flash on tap — buttons provide their own :active feedback */
+  -webkit-tap-highlight-color: transparent;
+  /* No font inflation in landscape */
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
   background-color: #fdfbf6;
+}
+
+@layer base {
+  /* iOS zooms into inputs under 16px and never zooms back out */
+  input,
+  textarea,
+  select {
+    font-size: 16px;
+  }
+
+  /* Fire taps immediately (no double-tap-zoom wait) and don't select control labels on long-press */
+  a,
+  button,
+  [role="button"] {
+    touch-action: manipulation;
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+  }
 }
